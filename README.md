@@ -1,13 +1,6 @@
 # AI Research Paper Assistant
 
-An AI chatbot that answers questions about foundational AI research papers using Retrieval-Augmented Generation (RAG) — built with the very technique the knowledge base describes. Answers are grounded strictly in the source PDF documents, with page-level citations — if the answer isn't in the documents, the bot says so instead of guessing.
-
-Sources:
-1. Attention Is All You Need (Transformers) — arxiv.org/pdf/1706.03762
-2. The RAG paper (Retrieval-Augmented Generation) — arxiv.org/pdf/2005.11401
-3. LoRA (efficient fine-tuning) — arxiv.org/pdf/2106.09685
-4. InstructGPT (RLHF / why chatbots follow instructions) — arxiv.org/pdf/2203.02155.
-5. Chain-of-Thought Prompting — arxiv.org/pdf/2201.11903
+An AI chatbot that answers questions about foundational AI research papers using Retrieval-Augmented Generation (RAG) — built with the very technique its knowledge base describes. Answers are grounded strictly in the source papers, with page-level citations; if the answer isn't in the papers, the bot says so instead of guessing.
 
 **🔗 Live demo:** (https://rag-chatbot-ztfq8ijfwynysl5cwzq7om.streamlit.app/)
 
@@ -30,6 +23,15 @@ PDFs → chunked (1000 chars, 150 overlap) → embedded (gemini-embedding-001)
    instructs Gemini to answer **only** from the provided context, and the UI
    displays which PDF and page each answer came from.
 
+## Knowledge Base
+1. Attention Is All You Need (Transformers) — arxiv.org/pdf/1706.03762
+2. The RAG paper (Retrieval-Augmented Generation) — arxiv.org/pdf/2005.11401
+3. LoRA (efficient fine-tuning) — arxiv.org/pdf/2106.09685
+4. InstructGPT (RLHF / why chatbots follow instructions) — arxiv.org/pdf/2203.02155.
+5. Chain-of-Thought Prompting — arxiv.org/pdf/2201.11903
+
+The knowledge base is fully swappable — drop any PDFs into docs/ and re-run ingestion to build an assistant for a different domain.
+
 ## Tech stack
 
 - **LangChain** (LCEL) — retrieval pipeline orchestration
@@ -41,7 +43,7 @@ PDFs → chunked (1000 chars, 150 overlap) → embedded (gemini-embedding-001)
 ## Run it locally
 
 ```bash
-git clone https://github.com/[YOUR_USERNAME]/rag-chatbot.git
+git clone https://github.com/xjmldnish/rag-chatbot.git
 cd rag-chatbot
 python -m venv venv
 venv\Scripts\activate          # Windows (macOS/Linux: source venv/bin/activate)
@@ -64,3 +66,8 @@ To use your own documents, drop PDFs into `docs/` and re-run `python ingest.py`.
   `gemini-embedding-001` mid-project (768 → 3072 dimensions), which required
   rebuilding the vector store — embedding models must match between indexing
   and querying
+- Implemented batched ingestion with rate-limit backoff (90 chunks per batch)
+to work within the Gemini free tier's 100 requests/minute quota
+- Debugged a cloud deployment failure caused by pip freeze-pinned versions
+clashing with the deployment platform's Python version — replaced with a
+minimal unpinned requirements file
