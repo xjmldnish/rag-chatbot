@@ -9,7 +9,7 @@ Sources:
 4. InstructGPT (RLHF / why chatbots follow instructions) — arxiv.org/pdf/2203.02155.
 5. Chain-of-Thought Prompting — arxiv.org/pdf/2201.11903
 
-**🔗 Live demo:** [PASTE YOUR STREAMLIT URL AFTER STEP 4.5]
+**🔗 Live demo:** [(https://rag-chatbot-ztfq8ijfwynysl5cwzq7om.streamlit.app/)]
 
 ![Screenshot](screenshot.png)
 
