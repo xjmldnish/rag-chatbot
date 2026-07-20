@@ -5,7 +5,7 @@ LHDN guidelines"] using Retrieval-Augmented Generation (RAG). Answers are
 grounded strictly in the source PDF documents, with page-level citations —
 if the answer isn't in the documents, the bot says so instead of guessing.
 
-**🔗 Live demo:** [PASTE YOUR STREAMLIT URL AFTER STEP 4.5]
+**🔗 Live demo:** [(https://rag-chatbot-ztfq8ijfwynysl5cwzq7om.streamlit.app/)]
 
 ![Screenshot](screenshot.png)
 
