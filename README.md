@@ -1,9 +1,13 @@
-# [PROJECT NAME — e.g. "Malaysian Statutory Assistant"]
+# [AI Research Paper Assistant]
 
-An AI chatbot that answers questions about [YOUR DOMAIN — e.g. "EPF, SOCSO and
-LHDN guidelines"] using Retrieval-Augmented Generation (RAG). Answers are
-grounded strictly in the source PDF documents, with page-level citations —
-if the answer isn't in the documents, the bot says so instead of guessing.
+An AI chatbot that answers questions about foundational AI research papers using Retrieval-Augmented Generation (RAG) — built with the very technique the knowledge base describes. Answers are grounded strictly in the source PDF documents, with page-level citations — if the answer isn't in the documents, the bot says so instead of guessing.
+
+Sources:
+1. Attention Is All You Need (Transformers) — arxiv.org/pdf/1706.03762
+2. The RAG paper (Retrieval-Augmented Generation) — arxiv.org/pdf/2005.11401
+3. LoRA (efficient fine-tuning) — arxiv.org/pdf/2106.09685
+4. InstructGPT (RLHF / why chatbots follow instructions) — arxiv.org/pdf/2203.02155.
+5. Chain-of-Thought Prompting — arxiv.org/pdf/2201.11903
 
 **🔗 Live demo:** [PASTE YOUR STREAMLIT URL AFTER STEP 4.5]
 

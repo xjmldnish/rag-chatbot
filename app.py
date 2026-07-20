@@ -22,8 +22,8 @@ def load_components():
 
 retriever, llm, prompt = load_components()
 
-st.title("📄 Document Assistant")
-st.caption("Answers are grounded in the source PDFs — sources shown below each answer.")
+st.title("🧠 AI Research Paper Assistant")
+st.caption("Answers are grounded in the source PDFs (Transformers, RAG, LoRA, RLHF, Chain-of-Thought) — sources shown below each answer.")
 
 if question := st.chat_input("Ask a question..."):
     st.chat_message("user").write(question)
