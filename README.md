@@ -1,4 +1,4 @@
-# [AI Research Paper Assistant]
+# AI Research Paper Assistant
 
 An AI chatbot that answers questions about foundational AI research papers using Retrieval-Augmented Generation (RAG) — built with the very technique the knowledge base describes. Answers are grounded strictly in the source PDF documents, with page-level citations — if the answer isn't in the documents, the bot says so instead of guessing.
 
@@ -9,7 +9,7 @@ Sources:
 4. InstructGPT (RLHF / why chatbots follow instructions) — arxiv.org/pdf/2203.02155.
 5. Chain-of-Thought Prompting — arxiv.org/pdf/2201.11903
 
-**🔗 Live demo:** [(https://rag-chatbot-ztfq8ijfwynysl5cwzq7om.streamlit.app/)]
+**🔗 Live demo:** (https://rag-chatbot-ztfq8ijfwynysl5cwzq7om.streamlit.app/)
 
 ![Screenshot](screenshot.png)
 
